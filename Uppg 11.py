@@ -40,25 +40,25 @@ import numpy as np
 from numpy import array
 
 
-
+# Solution 1
 def bapo4(data):
     data = array(list(map((lambda x: list(map(int, x.split()))), data.splitlines())))
     bap = 1
     for y in range(0, 20):
         for x in range(0, 20):
             if x<17:
-            if x < 17 and np.prod(data[y, x:x+4]) > bap:
-                bap = np.prod(data[y, x:x+4])
-            if y < 17 and np.prod(data[y:y+4, x]) > bap:
-                bap = np.prod(data[y:y+4, x])
-            if x < 17 and y < 17 and np.prod(data[y, x] * data[y+1, x+1] * data[y+2, x+2] * data[y+3, y+3]) > bap:
-                bap = np.prod(data[y, x] * data[y+1, x+1] * data[y+2, x+2] * data[y+3, x+3])
-            if x > 2 and y < 17 and np.prod(data[y, x] * data[y+1, x-1] * data[y+2, x-2] * data[y+3, x-3]) > bap:
-                bap = np.prod(data[y, x] * data[y+1, x-1] * data[y+2, x-2] * data[y+3, x-3])
+                if x < 17 and np.prod(data[y, x:x+4]) > bap:
+                    bap = np.prod(data[y, x:x+4])
+                if y < 17 and np.prod(data[y:y+4, x]) > bap:
+                    ap = np.prod(data[y:y+4, x])
+                if x < 17 and y < 17 and np.prod(data[y, x] * data[y+1, x+1] * data[y+2, x+2] * data[y+3, y+3]) > bap:
+                    bap = np.prod(data[y, x] * data[y+1, x+1] * data[y+2, x+2] * data[y+3, x+3])
+                if x > 2 and y < 17 and np.prod(data[y, x] * data[y+1, x-1] * data[y+2, x-2] * data[y+3, x-3]) > bap:
+                    bap = np.prod(data[y, x] * data[y+1, x-1] * data[y+2, x-2] * data[y+3, x-3])
     return bap
 
 
-t1 = ti()
+t11 = ti()
 data = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -79,6 +79,6 @@ data = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
-print(bapo4(data))
-t2 = ti()
-print("Time taken: " + str((t2-t1)*10**6) + u'\u03BC' + "s")
+print("The answer to Project Euler, problem 11 is: " + str(bapo4(data)))
+t12 = ti()
+print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

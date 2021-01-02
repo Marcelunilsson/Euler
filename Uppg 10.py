@@ -18,7 +18,7 @@ from timeit import default_timer as ti
 #import numpy as np
 
 
-
+# Solution 1
 
 def ps(lim):
     pbl = [True] * lim
@@ -29,7 +29,7 @@ def ps(lim):
             for n in range(i**2, lim, i):
                 pbl[n] = False
 
-t1 = ti()
-print(sum(ps(2*10**6)))
-t2 = ti()
-print("Time taken: " + str((t2-t1)*10**6) + u'\u03BC' + "s")
+t11 = ti()
+print("The answer to Project Euler, problem 10 is: " + str(sum(ps(2*10**6))))
+t12 = ti()
+print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

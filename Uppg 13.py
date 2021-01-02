@@ -102,3 +102,18 @@ data = """37107287533902102798797998220837590246510135740250
 72107838435069186155435662884062257473692284509516
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
+
+
+# A timer to performance test the solutions
+from timeit import default_timer as ti
+from functools import reduce
+# numpy to make calculations
+import numpy as np
+from numpy import array
+
+# Solution 1
+
+t11 = ti()
+print("The answer to Project Euler, problem 12 is: " + str(sum([int(line[:11]) for line in data.splitlines()]))[:10])
+t12 = ti()
+print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")
