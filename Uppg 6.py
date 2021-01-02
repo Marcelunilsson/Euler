@@ -17,13 +17,13 @@
 # A timer to performance test the solutions
 from timeit import default_timer as timer
 
-
+# Solution 1
 def sql(vec):
     return map(lambda x: x**2, vec)
-t1 = timer()
+t11 = timer()
 vec = range(101)
 vecsq = sql(vec)
 
-print(sum(vec)**2 - sum(vecsq))
-t2 = timer()
-print("Time taken: " + str((t2-t1)*10**6) + u'\u03BC' + "s")
+print("The answer to Project Euler, problem 6 is: " + str(sum(vec)**2 - sum(vecsq)))
+t12 = timer()
+print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

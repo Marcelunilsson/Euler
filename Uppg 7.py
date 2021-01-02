@@ -39,10 +39,10 @@ from timeit import default_timer as timer
 #    return lp[-1]
 
 # main program
-#t1 = timer()
-#print("Prime number 10001 is: " + str(p10001()))
-#t2 = timer()
-#print(t2-t1)
+#t11 = timer()
+#print("The answer to Project Euler, problem 7 is: " + str(p10001()))
+#t12 = timer()
+#print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")
 
 # Solution 2
 
@@ -69,6 +69,6 @@ def isprime(n):
     return True
 
 t21 = timer()
-print(ps(200000))
+print("The answer to Project Euler, problem 7 is: " + str(ps(200000)))
 t22 = timer()
-print("Time taken: " + str((t22-t21)*10**6) + u'\u03BC' + "s")
+print("Time lapsed for solution number 2: " + str((t22-t21)*10**6) + u'\u03BC' + "s")

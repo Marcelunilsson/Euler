@@ -58,7 +58,7 @@ tdn =  """73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450"""
 
-
+# Solution 1
 # multiplying all the elements in the list
 def ml(list):
     prod = 1
@@ -85,7 +85,7 @@ def mlstr(list):
     return str
 
 
-t1 = timer()
-print(biggestprime(tdn))
-t2 = timer()
-print("Time taken: " + str((t2-t1)*10**6) + u'\u03BC' + "s")
+t11 = timer()
+print("The answer to Project Euler, problem 8 is: " + str(biggestprime(tdn)))
+t12 = timer()
+print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

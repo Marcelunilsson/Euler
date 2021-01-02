@@ -11,7 +11,7 @@
 # A timer to performance test the solutions
 from timeit import default_timer as timer
 
-
+# Solution 1
 def div20(nbr):
     c = 0
     while True:
@@ -25,7 +25,7 @@ def div20(nbr):
             if c == 17:
                 return nbr
         nbr += 19
-t1 = timer()
-print(div20(19))
-t2 = timer()
-print("Time taken: " + str((t2-t1)*10**6) + u'\u03BC' + "s")
+t11 = timer()
+print("The answer to Project Euler, problem 5 is: " + str(div20(19)))
+t12 = timer()
+print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")
