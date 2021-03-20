@@ -11,7 +11,7 @@
 
 # A timer to performance test the solutions
 from timeit import default_timer as timer
-
+import os.path as op
 
 
 # Solution 1
@@ -40,7 +40,7 @@ from timeit import default_timer as timer
 
 # main program
 #t11 = timer()
-#print("The answer to Project Euler, problem 7 is: " + str(p10001()))
+#print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(p10001()))
 #t12 = timer()
 #print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")
 
@@ -69,6 +69,6 @@ def isprime(n):
     return True
 
 t21 = timer()
-print("The answer to Project Euler, problem 7 is: " + str(ps(200000)))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(ps(200000)))
 t22 = timer()
 print("Time lapsed for solution number 2: " + str((t22-t21)*10**6) + u'\u03BC' + "s")

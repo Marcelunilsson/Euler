@@ -13,6 +13,7 @@
 
 # A timer to performance test the solutions
 from timeit import default_timer as ti
+import os.path as op
 
 # numpy to make calculations
 #import numpy as np
@@ -30,6 +31,6 @@ def ps(lim):
                 pbl[n] = False
 
 t11 = ti()
-print("The answer to Project Euler, problem 10 is: " + str(sum(ps(2*10**6))))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(sum(ps(2*10**6))))
 t12 = ti()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

@@ -12,7 +12,7 @@
 
 # A timer to performance test the solutions
 from timeit import default_timer as timer
-
+import os.path as op
 
 # Solution 1
 s11 = timer()
@@ -23,7 +23,7 @@ while c ** 2 < nbr:
     if nbr % c == 0:
         nbr /= c
     c += 2
-print("The answer to Project Euler, problem 3 is: " + str(int(nbr)))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(int(nbr)))
 s12 = timer()
 print("Time lapsed for solution number 1: " + str((s12-s11)*10**6) + u'\u03BC' + "s")
 
@@ -71,7 +71,7 @@ def bpinbr():
 #main program
 nbr = 600851475143
 #nbr = int(input("For wich number do you want to know the biggest primefactor? : "))
-print("The answer to Project Euler, problem 3 is: " + str(bpinbr()))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(bpinbr()))
 s22 = timer()
 print("Time lapsed for solution number 2: " + str((s22-s21)*10**6) + u'\u03BC' + "s")
 
@@ -89,7 +89,7 @@ def recbigprime(nbr, c):
         nbr /= c
         recbigprime(nbr, c)
     else:
-        print("The answer to Project Euler, problem 3 is: " + str(int(nbr)))
+        print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(int(nbr)))
         return True
 
 recbigprime(nbr, c)

@@ -15,6 +15,7 @@
 
 # A timer to performance test the solutions
 from timeit import default_timer as ti
+import os.path as op
 
 # numpy to make calculations
 #import numpy as np
@@ -27,7 +28,7 @@ def fpt1000():
             for x in range(200, y):
                 if x < y < z and x + y + z == 1000:
                     if x**2 + y**2 == z**2:
-                        print("The answer to Project Euler, problem 9 is: " + "abc = " + str(x * y * z))
+                        print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + "abc = " + str(x * y * z))
                         print("                                           a =" + str(x) + ", b =" + str(y) + ", c =" + str(z))
     return True
 t11 = ti()

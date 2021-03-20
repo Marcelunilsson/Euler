@@ -31,6 +31,7 @@ from functools import reduce
 # numpy to make calculations
 import numpy as np
 from numpy import array
+import os.path as op
 
 # Solution 1
 def tn500d():
@@ -48,6 +49,6 @@ def tn500d():
 
 
 t11 = ti()
-print("The answer to Project Euler, problem 12 is: " + str(tn500d()))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(tn500d()))
 t12 = ti()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

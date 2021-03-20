@@ -14,10 +14,11 @@ Completed on Tue, 12 Mar 2013, 07:46
 """
 
 from timeit import default_timer as timer
+import os.path as op
 
 
 # Solution 1
 s11 = timer()
-print("The answer to Project Euler, problem 1 is: " + str(sum(set([threes for threes in range(0, 1000, 3)] + [fives for fives in range(0, 1000, 5)]))))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(sum(set([threes for threes in range(0, 1000, 3)] + [fives for fives in range(0, 1000, 5)]))))
 s12 = timer()
 print("Time lapsed for solution number 1: " + str((s12-s11)*10**6) + u'\u03BC' + "s")

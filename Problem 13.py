@@ -111,9 +111,12 @@ from functools import reduce
 import numpy as np
 from numpy import array
 
+import os.path as op
+
+
 # Solution 1
 
 t11 = ti()
-print("The answer to Project Euler, problem 12 is: " + str(sum([int(line[:11]) for line in data.splitlines()]))[:10])
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(sum([int(line[:11]) for line in data.splitlines()]))[:10])
 t12 = ti()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

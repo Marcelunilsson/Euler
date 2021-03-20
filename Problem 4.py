@@ -10,7 +10,7 @@
 
 # A timer to performance test the solutions
 from timeit import default_timer as timer
-
+import os.path as op
 
 # Solution 1
 # multiplier
@@ -35,6 +35,6 @@ def cip(n):
 # main program
 t1 = timer()
 sr = 10
-print("The answer to Project Euler, problem 4 is: " + str(mp(sr)))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(mp(sr)))
 t2 = timer()
 print("Time lapsed for solution number 1: " + str((t2-t1)*10**6) + u'\u03BC' + "s")

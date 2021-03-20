@@ -25,6 +25,9 @@ Completed on Wed, 4 Jul 2018, 14:17
 """
 
 from timeit import default_timer as ti
+import os.path as op
+
+# Solution 1
 t11 = ti()
 biggestNbr, largestChain = 0, 0
 for startNbr in range(10**6, 8*10**5, -1):
@@ -39,6 +42,6 @@ for startNbr in range(10**6, 8*10**5, -1):
         largestChain = count
         biggestNbr = startNbr
 
-print("The answer to Project Euler, problem 14 is: " + str(biggestNbr))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(biggestNbr))
 t12 = ti()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

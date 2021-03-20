@@ -15,6 +15,7 @@ Answer:  4613732
 Completed on Tue, 12 Mar 2013, 08:06
 """
 from timeit import default_timer as timer
+import os.path as op
 
 # Solution 1
 s11 = timer()
@@ -25,6 +26,6 @@ while b <= upperLim:
     b = c
     if c%2 == 0:
         sum += c
-print("The answer to Project Euler, problem 2 is: " + str(sum))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(sum))
 s12 = timer()
 print("Time lapsed for solution number 2: " + str((s12-s11)*10**6) + u'\u03BC' + "s")

@@ -10,6 +10,7 @@
 
 # A timer to performance test the solutions
 from timeit import default_timer as timer
+import os.path as op
 
 # Solution 1
 def div20(nbr):
@@ -26,6 +27,6 @@ def div20(nbr):
                 return nbr
         nbr += 19
 t11 = timer()
-print("The answer to Project Euler, problem 5 is: " + str(div20(19)))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(div20(19)))
 t12 = timer()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

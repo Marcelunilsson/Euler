@@ -36,6 +36,7 @@ from timeit import default_timer as timer
 # numpy to make calculations
 import numpy as np
 
+import os.path as op
 
 tdn =  """73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
@@ -86,6 +87,6 @@ def mlstr(list):
 
 
 t11 = timer()
-print("The answer to Project Euler, problem 8 is: " + str(biggestprime(tdn)))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(biggestprime(tdn)))
 t12 = timer()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

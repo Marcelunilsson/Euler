@@ -15,6 +15,7 @@ Completed on Sun, 8 Jul 2018, 15:46
 """
 import math
 from timeit import default_timer as ti
+import os.path as op
 
 
 # Solution 1
@@ -22,6 +23,6 @@ def latticePaths(n, m):
     return int(math.factorial(n+m) / (math.factorial(n)*math.factorial(m)))
 
 t11 = ti()
-print("The answer to Project Euler, problem 15 is: " + str(latticePaths(20, 20)))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(latticePaths(20, 20)))
 t12 = ti()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")

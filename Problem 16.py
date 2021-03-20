@@ -11,6 +11,7 @@ Answer:  1366
 """
 import math
 from timeit import default_timer as ti
+import os.path as op
 
 
 # Solution 1
@@ -18,6 +19,6 @@ def sumOfDigits(nbr):
     return sum([int(dig) for dig in str(nbr)])
 
 t11 = ti()
-print("The answer to Project Euler, problem 16 is: " + str(sumOfDigits(2**(1000))))
+print(f"The answer to Project Euler, {op.basename(__file__)[:-3]} is: " + str(sumOfDigits(2**(1000))))
 t12 = ti()
 print("Time lapsed for solution number 1: " + str((t12-t11)*10**6) + u'\u03BC' + "s")
